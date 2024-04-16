@@ -1,0 +1,22 @@
+{
+    "name": "meta-llama/Llama-2-7b",
+    "urls": "https://huggingface.co/meta-llama/Llama-2-7b",
+    "num_param": 7,
+    "context_window": 4000,
+    "backbone": "Llama_2_7B",
+    "license": "llama2",
+    "easy_case": [],
+    "medium_case": [],
+    "hard_case": [],
+    "paper_link": null,
+    "pretrained_datasets": null,
+    "languages": null,
+    "post_train_techniques": null,
+    "post_train_datasets": null,
+    "release_date": null,
+    "arena_rank": null,
+    "arena_elo": null,
+    "arena_votes": null,
+    "pretraining_cost": null,
+    "post_training_cost": null
+}
