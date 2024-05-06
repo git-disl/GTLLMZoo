@@ -163,12 +163,12 @@ class LLM:
 
 
 if __name__ == "__main__":
-    llm = LLM("meta-llama/Llama-2-7b", "https://huggingface.co/meta-llama/Llama-2-7b", 7, 4000, Llama_2_7B, llama2)
-    # write to json file
-    with open('llm.json', 'w') as json_file:
-        json.dump(llm.to_dict(), json_file, indent=4)
+    # llm = LLM("meta-llama/Llama-2-7b", "https://huggingface.co/meta-llama/Llama-2-7b", 7, 4000, Llama_2_7B, llama2)
+    # # write to json file
+    # with open('llm.json', 'w') as json_file:
+    #     json.dump(llm.to_dict(), json_file, indent=4)
     
     dset = Dataset("wikipedia", "https://huggingface.co/datasets/wikipedia", cc_by_sa_3_0)
     # write to json file
     with open('dset.json', 'w') as json_file:
-        json.dump(llm.to_dict(), json_file, indent=4)
+        json.dump(dset.to_dict(), json_file, indent=4)

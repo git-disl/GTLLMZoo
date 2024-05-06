@@ -1,0 +1,31 @@
+import pandas as pd
+import json
+
+def model_hyperlink(link, model_name):
+    return f'<a target="_blank" href="{link}" style="color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;">{model_name}</a>'
+
+def process_model(model_name):
+    link = f"https://huggingface.co/{model_name}"
+    return model_hyperlink(link, model_name)
+
+def get_df(type: str):
+    if type == "llm":
+        # read json files
+        with open('llm.json', 'r') as json_file:
+            llm_data = json.load(json_file)
+        # if data is not a list, put it into a list (temporary measure)
+        if not isinstance(llm_data, list):
+            llm_data = [llm_data]
+        # transform into DataFrame for better visualization
+        llm_df = pd.DataFrame(llm_data)
+        # transform name+link to markdown
+        llm_df["name"] = llm_df["name"].apply(process_model)
+        return llm_df
+    elif type == "dataset":
+        with open('dset.json', 'r') as json_file:
+            dset_data = json.load(json_file)
+        if not isinstance(dset_data, list):
+            dset_data = [dset_data]
+        dset_df = pd.DataFrame(dset_data)
+        dset_df["name"] = dset_df["name"].apply(process_model)
+        return dset_df
