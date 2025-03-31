@@ -19,7 +19,7 @@ Key features:
 ### Prerequisites
 
 - Python >= 3.9
-- Gradio
+- gradio==4.9.0
 - Pandas
 - Beautiful Soup (for data scraping)
 

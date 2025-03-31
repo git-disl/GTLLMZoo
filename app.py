@@ -1,10 +1,10 @@
 import gradio as gr
 import json
 import pandas as pd
-from control import create_dataset_checkbox_callback, create_callback
-from leaderboard import get_df
-from assets import custom_css
-from lb_utils import extract_model_info
+from src.control import create_dataset_checkbox_callback, create_callback
+from src.leaderboard import get_df
+from ui.assets import custom_css
+from src.lb_utils import extract_model_info
 
 # LLM_COLUMN_TO_DATATYPE ={
 #     # llm
@@ -288,4 +288,4 @@ with demo:
                 leaderboard_table,
             )
         
-demo.launch(share=False)
+demo.launch(share=True)

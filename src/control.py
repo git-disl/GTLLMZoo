@@ -1,4 +1,4 @@
-from leaderboard import get_df
+from src.leaderboard import get_df
 def select(
     search,     
     basic_info_checkboxes,

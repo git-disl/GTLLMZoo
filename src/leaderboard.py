@@ -25,7 +25,7 @@ def get_df(type: str):
         llm_df["name"] = llm_df["name"].apply(process_llm)
         return llm_df
     elif type == "dataset":
-        with open('dset.json', 'r') as json_file:
+        with open('data/dset.json', 'r') as json_file:
             dset_data = json.load(json_file)
         if not isinstance(dset_data, list):
             dset_data = [dset_data]
@@ -34,7 +34,7 @@ def get_df(type: str):
         return dset_df
     elif type == "merged_llm":
         # read csv file
-        llm_df = pd.read_csv('merged.csv')
+        llm_df = pd.read_csv('data/merged.csv')
         # transform name+link to markdown
         llm_df['Model_name'] = llm_df.apply(
             lambda row: row['Model_name'].apply(process_llm) if pd.isna(row['Model_link']) else model_hyperlink(row['Model_link'], row['Model_name']),

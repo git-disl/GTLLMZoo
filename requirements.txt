@@ -1,0 +1,8 @@
+# Core dependencies
+gradio==4.9.0
+pandas
+bs4
+# Optional (commonly needed for handling JSON, system ops, and potential parsing needs)
+numpy
+
+# If you're using conda, these might already be handled by the environment
