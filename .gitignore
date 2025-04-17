@@ -5,3 +5,4 @@ llm.json
 test.py
 utils.py
 value_counts.csv
+.gradio/
