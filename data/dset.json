@@ -1,7 +1,0 @@
-{
-    "name": "wikipedia",
-    "urls": "https://huggingface.co/datasets/wikipedia",
-    "license": "cc_by_sa_3_0",
-    "token_size": null,
-    "storage_size": null
-}
