@@ -6,3 +6,5 @@ test.py
 utils.py
 value_counts.csv
 .gradio/
+../.DS_Store
+.DS_Store

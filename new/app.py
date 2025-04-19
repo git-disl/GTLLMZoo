@@ -1,15 +1,12 @@
-# app.py
-import gradio as gr
-from ui import create_leaderboard_ui
-import logging
+import os
+import sys
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Add project root to path so we can import modules
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from src.ui import create_leaderboard_ui
 
 if __name__ == "__main__":
-    logging.info("Starting leaderboard application...")
-    leaderboard_app = create_leaderboard_ui()
-
-    logging.info("Launching Gradio interface...")
-    # You can add server_name="0.0.0.0" to allow access from other devices on your network
-    leaderboard_app.launch()
-    logging.info("Gradio interface stopped.")
+    # Create and launch the UI
+    app = create_leaderboard_ui()
+    app.launch()
