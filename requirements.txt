@@ -1,8 +1,4 @@
-# Core dependencies
-gradio==4.9.0
+gradio==5.25.2
 pandas
-bs4
-# Optional (commonly needed for handling JSON, system ops, and potential parsing needs)
+plotly
 numpy
-
-# If you're using conda, these might already be handled by the environment
