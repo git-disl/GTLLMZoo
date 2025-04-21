@@ -1,6 +1,6 @@
 # LLM Leaderboard Explorer
 
-An interactive dashboard for exploring and visualizing merged data from LLM leaderboards, built with Gradio.
+An interactive dashboard for exploring and visualizing merged data from LLM leaderboards, built with Gradio. **Check it out our deployed HuggingFace Space: [Link](https://huggingface.co/spaces/RaccoonOnion/gt-llm-zoo)**
 
 ## 📊 Overview
 
